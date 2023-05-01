@@ -1,10 +1,11 @@
-﻿
+﻿using NetChat.WPF.ViewModels.Base;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace NetChat.Application.ViewModels.Base
 {
-    internal abstract class ViewModelBase : INotifyPropertyChanged, IDisposable
+    internal abstract class ViewModelBase : INotifyPropertyChanged, IDisposable, IViewModel
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
